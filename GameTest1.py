@@ -1,6 +1,6 @@
 import os,time
 
-playAgain="Yes"
+playAgain="1"
 
 def check_guess(guess, answer):
     global score
@@ -16,7 +16,7 @@ def check_guess(guess, answer):
                 guess = input("Sorry Wrong Answer, try again: ")
             attempt = attempt + 1
     if attempt == 3:
-        print("The Correct answer is ",answer )
+        print("The Correct answer is ",answer)
 
 def animation():
     os.system('clear')
@@ -32,23 +32,28 @@ def animation():
         time.sleep(0.5)
         os.system('clear')
 
-while playAgain=="Yes":
-    print("=========WELCOME TO QUIZ SYSTEM==========")
+while playAgain=="1":
+    print("                                                                                                                                   =========WELCOME TO QUIZ SYSTEM==========")
     print("-----------------------------------------")
-    print("1. PLAY QUIZ")
-    print("2. SEE INSTRUCTIONS ON HOW TO PLAY THE GAME")
+    print("Type 1 to... PLAY QUIZ")
+    print("Type 2 to... LEARN ABOUT THE PROJECT")
     choice = int(input('ENTER YOUR CHOICE: '))
     if choice ==2:
-        print("Jabari Wants to jump off the diving board at his local pool. Unfortuitly he cant untill YOU fix the diving board! You can fix the diving board by answering questions. You need to answer six question correctly for the diving board to be fixed. If you mess up three times the diving board gets perminitly broken! Now onto the quiz :)")
+        print("                                                                                                                                   Hi, Im Alexander Genkov, a year 9 student at Upper Canada College. I have made this quiz game loosly on the story of Jabari Jumps. A increaible childrens book by Gaia Cornwall. Please enjoy the game.")
+
+        print("                                                                                                                                   Oh no, the diving board at the pool house is broke! Jabri is sad but he has hope because you are here! You can fix the diving board by answering the following questions correctly there are 9 questions in total. You must get all 9 question correct to fix the diving board. If you don't... Dont worry, you have three aptempts on each question, in the vent that you do fail, continue going to train your knowledge. Good luck :) !")
+    
+    else:
+        print("                                                                                                                                   Oh no, the diving board at the pool house is broke! Jabri is sad but he has hope because you are here! You can fix the diving board by answering the following questions correctly there are 9 questions in total. You must get all 9 question correct to fix the diving board. If you don't... Dont worry, you have three aptempts on each question, in the vent that you do fail, continue going to train your knowledge. Good luck :) !")
 
 
         
     score = 0
-    print("                                                                                                                                   Answer the questions to the best of your ability: ")
+    print("                                                                                                                                   Answer the questions to the best of your ability:                                                                                                                                    ")
 
     guess1 = input("Jabri wants a soda from the vending mechine. Jabri has a toonie, five dollar bill, and a quater. If the Soda cost $2.25, can Jabari pay in exact change? Y for Yes| N for No: ")
     check_guess(guess1, "y")
-    guess2 = input("Jabri Has two cookies and he wants to share it with his brother and father! How much of 1 cookie does each person get? Use the / as a fraction line:  ")
+    guess2 = input("Jabri Has two cookies and he wants to share them with his brother and father! What fraction of 1 cookie does each person get? Use the / as a fraction line:  ")
     check_guess(guess2, "2/3")
     guess3 = input("At the pool there is a lady painting, she is about to mix the colours Blue and yellow together. If she mixes red with that colour, what colour will she make?: ")
     check_guess(guess3, "brown")
@@ -72,4 +77,4 @@ while playAgain=="Yes":
         print(" Oh No. You were unable to fix the diving board. Please Try again!")
     print("Do you want to play again?")
 
-    playAgain = input("Yes or No: ")
+    playAgain = input("Please Type 1 for Yes or 2 for No: ")
